@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;NCT WISH 計算サイト&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff6fc;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #424242;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #d9006b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 900;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 14px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 3px 8px rgba(0,0,0,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.album-row {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.counter {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 34px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 34px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #ffd1e8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #d9006b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:active {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #ffb7db;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.num-display {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.result-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 6px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.total-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff0fa;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #d9006b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.total-money {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e9ffef;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #098c2e;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;NCT WISH トレカ &amp; シリアル計算&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ------------------------------------ --&gt;</p>
+<p class="p1">&lt;!-- アルバム購入数 --&gt;</p>
+<p class="p1">&lt;!-- ------------------------------------ --&gt;</p>
+<p class="p1">&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3&gt;購入数&lt;/h3&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;WISHport（¥8,500）</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('wishport', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="wishport" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('wishport', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;WISHarc（¥5,500）</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('wisharc', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="wisharc" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('wisharc', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;通常盤 初回（¥2,800）</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('normal', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="normal" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('normal', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h4&gt;Dreamy（各¥3,300）&lt;/h4&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;SION</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('sion', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="sion" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('sion', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;RIKU</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('riku', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="riku" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('riku', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;YUSHI</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('yushi', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="yushi" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('yushi', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;JAEHEE</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('jaehee', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="jaehee" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('jaehee', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;RYO</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('ryo', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="ryo" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('ryo', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;SAKUYA</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('sakuya', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="sakuya" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('sakuya', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ------------------------------------ --&gt;</p>
+<p class="p1">&lt;!-- 外付けシリアル（店舗別） --&gt;</p>
+<p class="p1">&lt;!-- ------------------------------------ --&gt;</p>
+<p class="p1">&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3&gt;外付けシリアル（ショップ別）&lt;/h3&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;タワレコ</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('tower', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="tower" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('tower', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;Amazon</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('amazon', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="amazon" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('amazon', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;HMV</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('hmv', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="hmv" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('hmv', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="album-row"&gt;CDJAPAN</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="counter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('cdjapan', -1)"&gt;−&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="cdjapan" class="num-display"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="chg('cdjapan', 1)"&gt;＋&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ------------------------------------ --&gt;</p>
+<p class="p1">&lt;!-- 結果表示 --&gt;</p>
+<p class="p1">&lt;!-- ------------------------------------ --&gt;</p>
+<p class="p1">&lt;div class="box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h3&gt;トレカ計算結果&lt;/h3&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="result-item"&gt;&lt;span&gt;ケミトレカA&lt;/span&gt;&lt;span id="chemiA"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="result-item"&gt;&lt;span&gt;セルカトレカA&lt;/span&gt;&lt;span id="selfA"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="result-item"&gt;&lt;span&gt;ケミトレカB&lt;/span&gt;&lt;span id="chemiB"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="result-item"&gt;&lt;span&gt;セルカトレカC&lt;/span&gt;&lt;span id="selfC"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="result-item"&gt;&lt;span&gt;セルカトレカD（Dreamy合計）&lt;/span&gt;&lt;span id="selfD"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="total-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>封入シリアル：&lt;span id="serialInner"&gt;0&lt;/span&gt; 枚</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="total-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>外付けシリアル（タワレコ）：&lt;span id="serTower"&gt;0&lt;/span&gt; 枚</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="total-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>外付けシリアル（Amazon）：&lt;span id="serAmazon"&gt;0&lt;/span&gt; 枚</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="total-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>外付けシリアル（HMV）：&lt;span id="serHMV"&gt;0&lt;/span&gt; 枚</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="total-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>外付けシリアル（CDJAPAN）：&lt;span id="serCDJ"&gt;0&lt;/span&gt; 枚</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="total-box total-money"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>合計金額：¥&lt;span id="money"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">function chg(id, num) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let v = Number(document.getElementById(id).textContent);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>v = Math.max(0, v + num);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById(id).textContent = v;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>calc();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function calc() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const wp = num("wishport"), wa = num("wisharc"), nm = num("normal");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const sion = num("sion"), riku = num("riku"), yushi = num("yushi");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const jaehee = num("jaehee"), ryo = num("ryo"), sakuya = num("sakuya");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const dreamyTotal = sion + riku + yushi + jaehee + ryo + sakuya;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// トレカ</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("chemiA", wp * 2);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("selfA", wp * 1);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("chemiB", wa * 3);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("selfC", nm * 1);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("selfD", dreamyTotal);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// 封入シリアル</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const serialInner =</p>
+<p class="p1"><span class="Apple-converted-space">    </span>wp * 3 + wa * 2 + nm * 1 + dreamyTotal * 1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("serialInner", serialInner);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// 外付けシリアル（各ショップ）</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const serTower = num("tower");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const serAmazon = num("amazon");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const serHMV = num("hmv");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const serCDJ = num("cdjapan");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("serTower", serTower);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("serAmazon", serAmazon);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("serHMV", serHMV);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("serCDJ", serCDJ);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// 金額</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const money =</p>
+<p class="p1"><span class="Apple-converted-space">    </span>wp * 8500 +</p>
+<p class="p1"><span class="Apple-converted-space">    </span>wa * 5500 +</p>
+<p class="p1"><span class="Apple-converted-space">    </span>nm * 2800 +</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dreamyTotal * 3300;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>set("money", money.toLocaleString());</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function num(id) { return Number(document.getElementById(id).textContent); }</p>
+<p class="p1">function set(id, value) { document.getElementById(id).textContent = value; }</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
